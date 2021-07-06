@@ -1,7 +1,5 @@
 # Nomen est Omen
 
-![](https://img.shields.io/maven-central/v/com.oblac/nomen-est-omen.svg)
-
 _"Your name is your destiny"_, so be sure you pick a good name.
 This Java library helps with generating some super-awesome random names
 that you can use for some unique IDs :)
@@ -27,9 +25,21 @@ It's complicated.
 
 ### 1. Add dependencies
 
+View the latest version [here](https://github.com/vladimir-paskov/nomen-est-omen/packages/885498).
+
 In your Gradle or Maven project, add:
 
-    com.oblac:nomen-est-omen:<version>
+    maven {
+        url 'https://maven.pkg.github.com/vladimir-paskov/nomen-est-omen'
+        credentials {
+            username "your_github_user_name"
+            password "your_personal_access_token"
+        }
+    }
+
+    implementation 'com.vmsoft:nomen-est-omen:<version>'
+    
+You can learn more about acess tokens [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry#authenticating-to-github-packages).
 
 ### 2. Use it
 
@@ -57,6 +67,11 @@ Templates can be created once:
 	String id2 = uigen.get();
 
 Nice!
+
+## Thanx to Igor Spasić
+
+This repo is forked from [igr/nomen-est-omen](https://github.com/igr/nomen-est-omen), to make this random name generator compatible with Android API 16 and newer.
+For more details see [Issue #1](https://github.com/vladimir-paskov/nomen-est-omen/issues/1)
 
 ## Thanx to Docker
 
