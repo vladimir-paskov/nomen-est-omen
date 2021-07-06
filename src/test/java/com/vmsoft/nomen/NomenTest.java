@@ -1,6 +1,6 @@
-package com.oblac.nomen;
+package com.vmsoft.nomen;
 
-import com.oblac.nomen.fixture.TestNomen;
+import com.vmsoft.nomen.fixture.TestNomen;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

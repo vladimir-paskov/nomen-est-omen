@@ -1,6 +1,6 @@
-package com.oblac.nomen.fixture;
+package com.vmsoft.nomen.fixture;
 
-import com.oblac.nomen.Nomen;
+import com.vmsoft.nomen.Nomen;
 
 /**
  * Test version.

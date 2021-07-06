@@ -1,4 +1,4 @@
-package com.oblac.nomen.data;
+package com.vmsoft.nomen.data;
 
 public final class Colors {
 

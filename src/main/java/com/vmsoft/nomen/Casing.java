@@ -1,4 +1,4 @@
-package com.oblac.nomen;
+package com.vmsoft.nomen;
 
 public enum Casing {
 	UPPERCASE,

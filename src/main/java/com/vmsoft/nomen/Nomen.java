@@ -1,13 +1,13 @@
-package com.oblac.nomen;
+package com.vmsoft.nomen;
 
-import com.oblac.nomen.data.Adjectives;
-import com.oblac.nomen.data.Animals;
-import com.oblac.nomen.data.Colors;
-import com.oblac.nomen.data.Nouns;
-import com.oblac.nomen.data.People;
-import com.oblac.nomen.data.Pokemon;
-import com.oblac.nomen.data.Superb;
-import com.oblac.nomen.data.Superheroes;
+import com.vmsoft.nomen.data.Adjectives;
+import com.vmsoft.nomen.data.Animals;
+import com.vmsoft.nomen.data.Colors;
+import com.vmsoft.nomen.data.Nouns;
+import com.vmsoft.nomen.data.People;
+import com.vmsoft.nomen.data.Pokemon;
+import com.vmsoft.nomen.data.Superb;
+import com.vmsoft.nomen.data.Superheroes;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
