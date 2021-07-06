@@ -1,4 +1,4 @@
-package com.oblac.nomen.data;
+package com.vmsoft.nomen.data;
 
 public final class Pokemon {
 	public static final String[] LIST = new String[]{

@@ -1,9 +1,7 @@
 plugins {
     id 'java-library'
-    id 'signing'
     id 'jacoco'
     id 'maven-publish'
-    id 'io.codearte.nexus-staging' version '0.30.0'
 }
 
 repositories {
@@ -12,8 +10,8 @@ repositories {
 }
 
 
-group = 'com.oblac'
-version = '2.1.0'
+group = 'com.vmsoft'
+version = '2.1.1'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -67,7 +65,7 @@ jacocoTestReport {
 // MAVEN
 //
 
-ext.admin = hasProperty('sonatypeUsername')
+ext.admin = hasProperty('github_user')
 
 publishing {
     publications {
@@ -85,46 +83,47 @@ publishing {
             pom {
                 name = 'Nomen est Omen'
                 description = 'Random names generator; for IDs or fun.'
-                url = 'https://oblac.com"'
+                url = 'https://www.vmsoft-bg.com'
                 licenses {
                     license {
                         name = 'BSD-2-Clause'
-                        url = 'https://github.com/igr/nomen-est-omen/blob/master/LICENSE'
+                        url = 'https://github.com/vladimir-paskov/nomen-est-omen/blob/master/LICENSE'
                     }
                 }
                 developers {
                     developer {
-                        id = 'igor'
-                        name = 'Igor Spasić'
-                        email = 'igor@jodd.org'
-                        timezone = '+1'
+                        id = 'vmsoft'
+                        name = 'Vladimir Paskov, original work by Igor Spasić'
+                        email = 'support@vmsoft-bg.com'
+                        timezone = '+2'
                     }
                 }
                 scm {
-                    url = 'https://github.com/igr/nomen-est-omen.git'
-                    connection = 'scm:git:git://github.com/igr/nomen-est-omen.git'
-                    developerConnection = 'scm:git:ssh://git@github.com/igr/nomen-est-omen.git'
+                    url = 'https://github.com/vladimir-paskov/nomen-est-omen'
+                    connection = 'scm:git:git://github.com/vladimir-paskov/nomen-est-omen.git'
+                    developerConnection = 'scm:git:ssh://git@github.com/vladimir-paskov/nomen-est-omen.git'
                 }
             }
         }
     }
     repositories {
         maven {
-            url "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+            name "GitHubPackages"
+            url "https://maven.pkg.github.com/vladimir-paskov/nomen-est-omen"
             if (admin) {
                 credentials {
-                    username sonatypeUsername
-                    password sonatypePassword
+                    username "${github_user}"
+                    password "${github_token}"
                 }
             }
         }
     }
 }
 
-signing {
-    required { admin }
-    sign publishing.publications.mavenJava
-}
+//signing {
+    //required { admin }
+    //sign publishing.publications.mavenJava
+//}
 
 task install(dependsOn: publishToMavenLocal) {
     group = 'Publishing'
